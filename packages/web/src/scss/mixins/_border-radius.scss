@@ -1,0 +1,7 @@
+$border-radius-map: (
+    form-input: 12px,
+);
+
+@function get-border-radius($border-radius) {
+    @return map-get($border-radius-map, $border-radius);
+}

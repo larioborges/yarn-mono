@@ -1,0 +1,62 @@
+$colour-pallete: (
+    sea-green-50: #80d3be,
+    sea-green: #00a67d,
+    white: #fff,
+    space-blue-50: #878c9b,
+    space-blue-75: #4a5368,
+    space-blue-100: #0e1936,
+    flat-aluminum: #c3c6cd,
+    true-blue-25: #cbd6e9,
+    link-water: #c3c6cd,
+    dark-salmon: #e79387,
+    polo-blue: #97acd2,
+    platinum-50: #f4f4f4,
+    platinum-100: #e9e9e9,
+    sapphire: #2f59a5,
+);
+
+@function get-color-from-pallete($colour) {
+    @return map-get($colour-pallete, $colour);
+}
+
+$theme-colours: (
+    // Buttons
+    primary-btn-text: get-color-from-pallete(white),
+    primary-btn-bg: get-color-from-pallete(sea-green),
+    primary-btn-border: get-color-from-pallete(sea-green),
+    primary-btn-disabled-bg: get-color-from-pallete(sea-green-50),
+    primary-btn-disabled-border: get-color-from-pallete(sea-green-50),
+    secondary-btn-text: get-color-from-pallete(sea-green),
+    secondary-btn-bg: get-color-from-pallete(white),
+    secondary-btn-border: get-color-from-pallete(sea-green),
+    secondary-btn-disabled-text: get-color-from-pallete(sea-green-50),
+    secondary-btn-disabled-border: get-color-from-pallete(sea-green-50),
+    tertiary-btn-text: get-color-from-pallete(space-blue-100),
+    tertiary-btn-bg: get-color-from-pallete(true-blue-25),
+    tertiary-btn-border: get-color-from-pallete(true-blue-25),
+    plain-btn-text: get-color-from-pallete(space-blue-100),
+    plain-btn-bg: get-color-from-pallete(white),
+    plain-btn-border: get-color-from-pallete(link-water),
+    text-btn-text: get-color-from-pallete(sea-green),
+    text-btn-disabled-text: get-color-from-pallete(sea-green-50),
+    // Input Field
+    input-field-border: get-color-from-pallete(polo-blue),
+    input-field-active-border: get-color-from-pallete(polo-blue),
+    input-field-label: get-color-from-pallete(space-blue-75),
+    input-field-empty-bg: get-color-from-pallete(platinum-50),
+    input-field-empty-border: get-color-from-pallete(platinum-50),
+    input-field-placeholder-text: get-color-from-pallete(space-blue-50),
+    input-field-focus-border: get-color-from-pallete(sapphire),
+    checkbox-label-text: get-color-from-pallete(space-blue-50),
+    // Generel
+    or-separator-line: get-color-from-pallete(platinum-100),
+    or-separator-text: get-color-from-pallete(space-blue-50),
+    error-color: get-color-from-pallete(dark-salmon),
+    default-text: get-color-from-pallete(space-blue-100),
+    default-bg: get-color-from-pallete(white),
+    h1: get-color-from-pallete(space-blue-100),
+);
+
+@function get-color($theme-color) {
+    @return map-get($theme-colours, $theme-color);
+}

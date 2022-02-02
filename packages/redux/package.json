@@ -1,0 +1,42 @@
+{
+    "name": "@lario/redux",
+    "version": "1.0.0",
+    "description": "Redux store for XO Sports application state and logic - implemented using Redux Toolkit.",
+    "main": "src/index.js",
+    "files": [
+        "src/**/*"
+    ],
+    "author": "Lario Borges",
+    "license": "ISC",
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "scripts": {
+        "test": "jest",
+        "format": "prettier --write \"src/**/*.js\"",
+        "lint": "eslint \"{src,apps,libs,test}/**/*.{js,json}\" --fix"
+    },
+    "dependencies": {
+        "@manaflair/redux-batch": "^1.0.0",
+        "@reduxjs/toolkit": "^1.7.1",
+        "@lario/validation": "workspace:^",
+        "lodash.debounce": "^4.0.8",
+        "redux-logger": "^3.0.6",
+        "redux-persist": "^6.0.0"
+    },
+    "devDependencies": {
+        "@jest/globals": "^27.4.4",
+        "@lario/eslint-config": "workspace:^",
+        "@lario/prettier-config": "workspace:^",
+        "eslint": "^8.5.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-json": "^3.1.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "jest": "^27.4.5",
+        "jest-config": "^27.4.5",
+        "jest-esm-transformer": "^1.0.0",
+        "prettier": "^2.5.0"
+    },
+    "prettier": "@lario/prettier-config"
+}

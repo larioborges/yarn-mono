@@ -1,0 +1,9 @@
+.form-error-msg {
+    color: get-color(error-color);
+    font-size: 13px;
+    padding-top: 8px;
+
+    &.large {
+        font-size: get-font-size(lg);
+    }
+}

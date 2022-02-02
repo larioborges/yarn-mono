@@ -1,0 +1,58 @@
+{
+    "name": "@lario/db-migration",
+    "version": "0.0.1",
+    "description": "DB migration and seeding CLI package, implemented using Umzug.",
+    "author": "Lario Borges",
+    "private": true,
+    "license": "UNLICENSED",
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "scripts": {
+        "lint": "eslint \"{src,apps,libs,test}/**/*.{js,json}\" --fix",
+        "create-migration": "node ./src/runTask --task create-migration --name",
+        "create-seeder": "node ./src/runTask --task create-seeder",
+        "create-seeder:local": "yarn create-seeder --name",
+        "create-seeder:staging": "yarn create-seeder --env staging --name",
+        "migrate-up": "node ./src/runTask --task migrate-up",
+        "migrate-down": "node ./src/runTask --task migrate-down",
+        "migrate-up:staging": "yarn migrate-up --env staging",
+        "migrate-down:staging": "yarn migrate-down --env staging",
+        "seed-up": "node ./src/runTask --task seed-up",
+        "seed-up:staging": "yarn seed-up --env staging",
+        "seed-down": "node ./src/runTask --task seed-down",
+        "seed-down:staging": "yarn seed-down --env staging",
+        "migration-list:pending": "node ./src/runTask --task migration-pending",
+        "migration-list:executed": "node ./src/runTask --task migration-executed",
+        "migration-list-json:pending": "yarn migration-list:executed --json",
+        "migration-list-json:executed": "yarn migration-list:executed --json",
+        "seed-list:pending": "node ./src/runTask --task seed-pending",
+        "seed-list:executed": "node ./src/runTask --task seed-executed",
+        "seed-list-json:pending": "yarn seed-list:pending --json",
+        "seed-list-json:executed": "yarn seed-list:executed --json"
+    },
+    "dependencies": {
+        "@lario/db-models": "workspace:^",
+        "bcrypt": "^5.0.1",
+        "child_process": "^1.0.2",
+        "command-line-args": "^5.2.0",
+        "cross-env": "^7.0.3",
+        "dotenv": "^10.0.0",
+        "fs-extra": "^10.0.0",
+        "mysql2": "^2.3.3",
+        "sequelize": "^6.14.1",
+        "umzug": "^3.0.0"
+    },
+    "devDependencies": {
+        "@lario/eslint-config": "workspace:^",
+        "@lario/prettier-config": "workspace:^",
+        "eslint": "^8.5.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-json": "^3.1.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "prettier": "^2.3.2"
+    },
+    "prettier": "@lario/prettier-config"
+}

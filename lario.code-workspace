@@ -1,0 +1,72 @@
+{
+	"folders": [
+        {
+            "path": "packages/db-migration",
+            "name": "db-migration",
+        },
+        {
+            "path": "packages/db-models",
+            "name": "db-models",
+        },
+        {
+            "path": "packages/api-server",
+            "name": "api-server",
+        },
+        {
+            "path": "packages/admin-console",
+            "name": "admin-console",
+        },
+        {
+            "path": "packages/validation",
+            "name": "validation",
+        },
+        {
+            "path": "packages/redux",
+            "name": "redux",
+        },
+        {
+            "path": "packages/web",
+            "name": "web",
+        },
+        {
+            "path": "packages/eslint-config",
+            "name": "eslint-config",
+        },
+        {
+            "path": "packages/prettier-config",
+            "name": "prettier-config",
+        },
+        {
+            "path": ".",
+            "name": "ROOT",
+        },
+    ],
+    "settings": {
+        "[javascript]": {
+            "editor.tabSize": 4
+        },
+        "[scss]": {
+            "editor.tabSize": 4
+        },
+        "[json]": {
+            "editor.tabSize": 4
+        },
+        "search.exclude": {
+            "**/.yarn": true,
+            "**/.pnp.*": true
+        },
+        "eslint.nodePath": ".yarn/sdks",
+        "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
+        "editor.bracketPairColorization.enabled": true
+    },
+    "extensions": {
+        "recommendations": [
+            "stylelint.vscode-stylelint",
+            "rvest.vs-code-prettier-eslint",
+            "esbenp.prettier-vscode",
+            "dbaeumer.vscode-eslint",
+            "irongeek.vscode-env",
+            "graphql.vscode-graphql"
+        ]
+    }
+}

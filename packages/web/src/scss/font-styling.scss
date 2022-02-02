@@ -1,0 +1,14 @@
+* {
+    font-family: get-font-family(primary);
+}
+
+// p {
+
+// }
+
+h1 {
+    font-size: get-font-size(xl);
+    color: get-color(h1);
+    font-weight: get-font-weight(bold);
+    line-height: 45px;
+}

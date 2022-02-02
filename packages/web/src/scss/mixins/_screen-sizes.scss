@@ -1,0 +1,48 @@
+$screen-sizes: (
+    xs: (
+        max: 575px,
+    ),
+    sm: (
+        min: 576px,
+        max: 767px,
+    ),
+    md: (
+        min: 768px,
+        max: 991px,
+    ),
+    lg: (
+        min: 992px,
+        max: 1199px,
+    ),
+    xl: (
+        min: 1200px,
+        max: 1399,
+    ),
+    xxl: (
+        min: 1400px,
+    ),
+);
+
+@function get-screen-size-conf($size) {
+    @return map-get($screen-sizes, $size);
+}
+
+@mixin media-query($sizes...) {
+    @each $size in $sizes {
+        $screen-conf: get-screen-size-conf($size);
+
+        @if $size == xs {
+            @media only screen and (max-width: map-get($screen-conf, max)) {
+                @content;
+            }
+        } @else if $size == xxl {
+            @media only screen and (min-width: map-get($screen-conf, min)) {
+                @content;
+            }
+        } @else {
+            @media only screen and (min-width: map-get($screen-conf, min)) and (max-width: map-get($screen-conf, max)) {
+                @content;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "@lario/prettier-config",
+    "version": "1.0.0",
+    "description": "Shared Prettier config for all XO Sports modules.",
+    "main": "index.json",
+    "author": "Lario Borges",
+    "license": "ISC",
+    "engines": {
+        "node": ">=16.0.0"
+    }
+}

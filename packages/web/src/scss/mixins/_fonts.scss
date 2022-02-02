@@ -1,0 +1,36 @@
+$font-sizes: (
+    xs: 8px,
+    sm: 10px,
+    md: 12px,
+    lg: 16px,
+    xl: 30px,
+    xxl: 36px,
+);
+
+@function get-font-size($font-size) {
+    @return map-get($font-sizes, $font-size);
+}
+
+$font-weights: (
+    thin: 100,
+    extra-light: 300,
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semi-bold: 600,
+    bold: 700,
+    extra-bold: 800,
+    super-bold: 900,
+);
+
+@function get-font-weight($font-weight) {
+    @return map-get($font-weights, $font-weight);
+}
+
+$font-families: (
+    primary: 'Poppins',
+);
+
+@function get-font-family($font-family) {
+    @return map-get($font-families, $font-family);
+}

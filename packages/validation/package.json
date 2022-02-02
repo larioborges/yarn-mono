@@ -1,0 +1,34 @@
+{
+    "name": "@lario/validation",
+    "version": "1.0.0",
+    "private": true,
+    "description": "XO Sports validation module - handles field validation and related error messages.",
+    "author": "Lario Borges",
+    "main": "src/index.js",
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "scripts": {
+        "test": "jest",
+        "lint": "eslint \"src/**/*.{js,json}\" --fix"
+    },
+    "dependencies": {
+        "email-validator": "^2.0.4",
+        "password-validator": "^5.2.1"
+    },
+    "devDependencies": {
+        "@jest/globals": "^27.4.4",
+        "@lario/eslint-config": "workspace:^",
+        "@lario/prettier-config": "workspace:^",
+        "eslint": "^8.5.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-json": "^3.1.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "jest": "^27.4.5",
+        "jest-config": "^27.4.5",
+        "jest-esm-transformer": "^1.0.0",
+        "prettier": "^2.5.0"
+    },
+    "prettier": "@lario/prettier-config"
+}
