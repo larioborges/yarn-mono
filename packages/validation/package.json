@@ -2,7 +2,7 @@
     "name": "@lario/validation",
     "version": "1.0.0",
     "private": true,
-    "description": "XO Sports validation module - handles field validation and related error messages.",
+    "description": "@lario validation module - handles field validation and related error messages.",
     "author": "Lario Borges",
     "main": "src/index.js",
     "engines": {

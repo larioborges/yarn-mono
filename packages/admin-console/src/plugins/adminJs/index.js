@@ -21,7 +21,7 @@ module.exports = fp(async (fastify, _, done) => {
             loginPath: '/console/login',
             resources: resources(modelsMap),
             branding: {
-                companyName: 'XO Sports',
+                companyName: 'Lario Starter',
             },
         });
 

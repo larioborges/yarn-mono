@@ -1,5 +1,5 @@
-CREATE DATABASE xosports;
-CREATE USER IF NOT EXISTS 'xosportsdev'@'localhost' IDENTIFIED BY 'xosportspassword';
-USE xosports;
-GRANT ALL PRIVILEGES ON xosports.* TO xosportsdev@localhost;
+CREATE DATABASE lariomono;
+CREATE USER IF NOT EXISTS 'lariodev'@'localhost' IDENTIFIED BY 'lariopassword';
+USE lariomono;
+GRANT ALL PRIVILEGES ON lariomono.* TO lariodev@localhost;
 FLUSH PRIVILEGES;

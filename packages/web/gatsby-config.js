@@ -23,9 +23,16 @@ require("dotenv").config({
 });
 
 module.exports = {
+    // In development mode proxy /api to our api server. When deployed this will be like cloudfront
+    proxy: [
+        {
+          prefix: "/api",
+          url: "http://localhost:8080",
+        },
+    ],
     siteMetadata: {
         siteUrl: process.env.SITE_BASE_URL,
-        title: 'XO Sports',
+        title: process.env.GATSBY_APP_NAME,
     },
     plugins: [
         {
@@ -40,7 +47,7 @@ module.exports = {
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sitemap',
         'gatsby-page-templates',
-        'gatsby-source-charities',
+        'gatsby-source-profile',
         'gatsby-redux',
         {
             resolve: 'gatsby-theme-material-ui',
@@ -70,9 +77,9 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-manifest',
             options: {
-                name: 'XO Sports',
-                short_name: 'XO Sports',
-                description: 'BOOM responsible sports betting',
+                name: process.env.GATSBY_APP_NAME,
+                short_name: process.env.GATSBY_APP_NAME,
+                description: 'Lario\'s monorepo',
                 lang: 'en',
                 display: 'standalone',
                 icon: 'src/images/icons/icon.png',
@@ -84,7 +91,7 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-offline',
             options: {
-                precachePages: ['/charities/'],
+                precachePages: ['/profiles/'],
                 workboxConfig: {
                     globPatterns: ['**/icons/*'],
                 }
@@ -117,14 +124,6 @@ module.exports = {
             options: {
               siteUrl: process.env.SITE_BASE_URL,
               stripQueryString: true,
-            },
-        },
-        {
-            resolve: `gatsby-plugin-s3`,
-            options: {
-              bucketName: `xos-${getEnvironmentName()}`,
-              protocol: "https",
-              hostname: "www.d1xxnisciw1mky.cloudfront.net",
             },
         },
     ],

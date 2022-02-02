@@ -1,7 +1,8 @@
 {
     "name": "@lario/redux",
     "version": "1.0.0",
-    "description": "Redux store for XO Sports application state and logic - implemented using Redux Toolkit.",
+    "private": true,
+    "description": "Redux store for @lario application state and logic - implemented using Redux Toolkit.",
     "main": "src/index.js",
     "files": [
         "src/**/*"
@@ -17,9 +18,9 @@
         "lint": "eslint \"{src,apps,libs,test}/**/*.{js,json}\" --fix"
     },
     "dependencies": {
+        "@lario/validation": "workspace:^",
         "@manaflair/redux-batch": "^1.0.0",
         "@reduxjs/toolkit": "^1.7.1",
-        "@lario/validation": "workspace:^",
         "lodash.debounce": "^4.0.8",
         "redux-logger": "^3.0.6",
         "redux-persist": "^6.0.0"

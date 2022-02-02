@@ -5,13 +5,10 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import HomeIconOutlined from '@mui/icons-material/HomeOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import SettingsIcon from '@mui/icons-material/Settings';
-import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-import SpeedIcon from '@mui/icons-material/Speed';
+import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';;
 import LeaderboardIcon from '@mui/icons-material/Leaderboard';
-import LocalAtmIcon from '@mui/icons-material/LocalAtm';
+
 import { Link } from 'gatsby-theme-material-ui';
 
 const SideMenuListItem = ({ to, text, icon }) => (
@@ -31,12 +28,8 @@ SideMenuListItem.propTypes = {
 export const mainNavItems = (
     <div>
         <SideMenuListItem to="/dashboard" icon={<HomeIconOutlined />} text="Dashboard" />
-        <SideMenuListItem icon={<PlayCircleOutlineIcon />} text="Games" />
-        <SideMenuListItem icon={<PeopleOutlineIcon />} text="My Tribe" />
-        <SideMenuListItem icon={<SpeedIcon />} text="Results" />
-        <SideMenuListItem icon={<LeaderboardIcon />} text="Leaderboard" />
-        <SideMenuListItem to="/charities" icon={<FavoriteBorderIcon />} text="Charities" />
-        <SideMenuListItem icon={<LocalAtmIcon />} text="Wallet" />
+        <SideMenuListItem to="/profiles" icon={<PeopleOutlineIcon />} text="Profiles" />
+        <SideMenuListItem icon={<LeaderboardIcon />} text="Most Viewed Profiles" />
         <SideMenuListItem to="/users/settings" icon={<SettingsIcon />} text="Settings" />
     </div>
 );

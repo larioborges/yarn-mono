@@ -1,20 +1,20 @@
 const path = require('path')
 
 exports.onPostBuild = ({ reporter }) => {
-	reporter.info('XO Sports build complete')
+	reporter.info('Lario web app build complete')
 }
 
 exports.createPages = async ({ graphql, actions }) => {
 	const { createPage } = actions;
 
-	await mapCharityTemplates(graphql, createPage);
+	await mapProfileTemplates(graphql, createPage);
 }
 
-const mapCharityTemplates = async (graphql, createPage) => {
-	const charityDetailsTemplate = path.resolve('src/templates/CharityDetails.js')
+const mapProfileTemplates = async (graphql, createPage) => {
+	const profileTemplate = path.resolve('src/templates/Profile.js')
 	const result = await graphql(`
     query {
-      allCharity {
+      allProfile {
         edges {
           node {
             id
@@ -28,10 +28,10 @@ const mapCharityTemplates = async (graphql, createPage) => {
     }
   	`);
 
-	result.data.allCharity.edges.forEach(edge => {
+	result.data.allProfile.edges.forEach(edge => {
 		createPage({
-			path: `/charities/${edge.node.slug}`,
-			component: charityDetailsTemplate,
+			path: `/profiles/${edge.node.slug}`,
+			component: profileTemplate,
 			context: {
 				id: edge.node.id,
 			},

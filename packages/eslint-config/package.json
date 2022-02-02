@@ -1,7 +1,8 @@
 {
     "name": "@lario/eslint-config",
     "version": "1.0.0",
-    "description": "Shared JS Eslint config for all XO Sports modules.",
+    "private": true,
+    "description": "Shared JS Eslint config for all @lario modules.",
     "main": "index.js",
     "author": "Lario Borges",
     "license": "ISC",

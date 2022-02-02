@@ -3,16 +3,14 @@ import { post } from '../../fetch';
 import { validationActions } from '../../validation/util';
 import { selectLoginRequestJson } from '../../selectors/users/login';
 import { setAuthToken } from './auth.js';
-import { getApiUrl } from '../../selectors/config';
 import { matchFormSetAction, resetSubmitError, initState, handleFormSubmit } from '../util';
 
 const REDUCER_NAME = 'login';
 
 export const submitLogin = createAsyncThunk(`${REDUCER_NAME}/submit`, async (_, thunkAPI) => {
     const loginSubmitPayload = selectLoginRequestJson(thunkAPI.getState());
-    const loginEndpoint = getApiUrl(thunkAPI.getState(), '/users/login');
     try {
-        const response = await post(loginEndpoint, loginSubmitPayload);
+        const response = await post('/api/users/login', loginSubmitPayload);
         thunkAPI.dispatch(setAuthToken(response.authToken));
         return response;
     } catch (err) {

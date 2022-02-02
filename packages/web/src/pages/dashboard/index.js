@@ -6,7 +6,7 @@ const DashboardPage = () => {
         <AppLayout
             title="Dashboard"
             metaTags={{
-                description: 'XO Sports - Dashboard',
+                description: 'Lario - Dashboard',
             }}
             headerContent={<h1>Dashboard</h1>}
             bodyContent={<h1>This is the Dashboard - coming soon</h1>}

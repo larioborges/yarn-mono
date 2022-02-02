@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export const PageHead = ({ title, metaTags }) => {
     return (
         <Helmet>
-            <title>{title ? title : 'XO Sports'}</title>
+            <title>{title ? title : process.env.GATSBY_APP_NAME}</title>
 
             {metaTags &&
                 Object.keys(metaTags).map((key) => (

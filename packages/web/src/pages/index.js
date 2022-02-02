@@ -1,7 +1,7 @@
 import React from 'react';
 import { navigate } from 'gatsby';
 const IndexPage = () => {
-    navigate('/charities');
+    navigate('/profiles');
 
     return <h1>Redirecting</h1>;
 };

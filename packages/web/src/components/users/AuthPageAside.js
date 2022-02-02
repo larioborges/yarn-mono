@@ -5,9 +5,7 @@ import './AuthPageAside.scss';
 export const AuthPageAside = () => (
     <div className="login-page-aside">
         <h2>
-            Lighting the flames of
-            <br />
-            <b>social change</b>
+            Lario's Monoreo
         </h2>
     </div>
 );

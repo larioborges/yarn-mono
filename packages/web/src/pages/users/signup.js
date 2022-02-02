@@ -7,9 +7,9 @@ import { SignupPageForm } from '../../components/users/SignupPageForm';
 const SignupPage = () => {
     return (
         <AuthLayout
-            title="Signup - XOSports"
+            title="Signup"
             metaTags={{
-                description: 'login bla bla',
+                description: 'Register',
             }}
             asideContent={<AuthPageAside />}
             mainContent={<SignupPageForm />}

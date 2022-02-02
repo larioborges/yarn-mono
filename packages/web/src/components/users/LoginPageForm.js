@@ -19,10 +19,7 @@ import {
     selectSubmitError,
 } from '@lario/redux/src/selectors/users/login';
 
-import { FacebookBtn } from '../form/FacebookBtn';
-import { GoogleBtn } from '../form/GoogleBtn';
 import Button from '@mui/material/Button';
-import { OrSeparator } from '../form/OrSeparator';
 import { FormError } from '../form/FormError';
 import TextField from '@mui/material/TextField';
 
@@ -56,16 +53,7 @@ export const LoginPageForm = () => {
             </p>
 
             <h1>Welcome back</h1>
-            <h3>Sign in to continue playing!</h3>
-
-            <div>
-                <FacebookBtn action="Sign in" />
-            </div>
-            <div>
-                <GoogleBtn action="Sign in" />
-            </div>
-
-            <OrSeparator />
+            <h3>Please Sign In!</h3>
 
             <TextField
                 label="Email Address"

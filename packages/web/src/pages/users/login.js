@@ -7,9 +7,9 @@ import { LoginPageForm } from '../../components/users/LoginPageForm';
 const LoginPage = () => {
     return (
         <AuthLayout
-            title="Login - XOSports"
+            title="Login"
             metaTags={{
-                description: 'login bla bla',
+                description: 'Login',
             }}
             asideContent={<AuthPageAside />}
             mainContent={<LoginPageForm />}

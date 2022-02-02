@@ -1,9 +1,9 @@
 const usersRoutes = require('./users');
-const charitiesRoutes = require('./charities');
+const profilesRoutes = require('./profiles');
 const pagesRoutes = require('./pages');
 
 module.exports = {
     usersRoutes,
-    charitiesRoutes,
+    profilesRoutes,
     pagesRoutes,
 };

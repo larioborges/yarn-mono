@@ -27,10 +27,7 @@ import {
     selectSubmitError,
 } from '@lario/redux/src/selectors/users/signup';
 
-import { FacebookBtn } from '../form/FacebookBtn';
-import { GoogleBtn } from '../form/GoogleBtn';
 import Button from '@mui/material/Button';
-import { OrSeparator } from '../form/OrSeparator';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { FormError } from '../form/FormError';
@@ -76,17 +73,8 @@ export const SignupPageForm = () => {
             </p>
 
             <div className="form-content">
-                <h1>Welcome to XO Life</h1>
-                <h3>Sign in to continue playing!</h3>
-
-                <div>
-                    <FacebookBtn action="Sign up" />
-                </div>
-                <div>
-                    <GoogleBtn action="Sign up" type="secondary" />
-                </div>
-
-                <OrSeparator />
+                <h1>Welcome to Lario's App</h1>
+                <h3>Please Register!</h3>
 
                 <TextField
                     label="First Name"

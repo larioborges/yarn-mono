@@ -1,7 +1,7 @@
 {
     "name": "@lario/admin-console",
     "version": "0.0.1",
-    "description": "API Server for the XO Sports application, implemented using Fastify.",
+    "description": "Admin Console for the @lario application, implemented using Fastify.",
     "author": "Lario Borges",
     "private": true,
     "license": "UNLICENSED",

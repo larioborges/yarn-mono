@@ -6,7 +6,6 @@ import { post } from '../../fetch';
 import { validationActions } from '../../validation/util';
 import { selectSignupRequestJson } from '../../selectors/users/signup';
 import { setAuthToken } from './auth.js';
-import { getApiUrl } from '../../selectors/config';
 import {
     matchFormSetAction,
     matchReducerAction,
@@ -21,9 +20,8 @@ const REDUCER_NAME = 'signup';
 
 export const submitSignup = createAsyncThunk(`${REDUCER_NAME}/submit`, async (_, thunkAPI) => {
     const signupSubmitPayload = selectSignupRequestJson(thunkAPI.getState());
-    const signupEndpoint = getApiUrl(thunkAPI.getState(), '/users/signup');
     try {
-        const response = await post(signupEndpoint, signupSubmitPayload);
+        const response = await post('/api/users/signup', signupSubmitPayload);
         thunkAPI.dispatch(setAuthToken(response.authToken));
         return response;
     } catch (err) {
